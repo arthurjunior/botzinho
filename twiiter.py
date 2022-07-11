@@ -17,3 +17,8 @@ numberTweets = 100
 #loping para ficar pesquisando os twit e cursor ( que recebe um metodo e um parametro da propia API)
 for tweet in tweepy.Cursor(api.serach, search).items(numberTweets):
     try:
+        #mensagem pra verificar no console se esta funcionado
+        print('tweet retuitado e favoritado')
+        tweet.retweet()
+        tweepy.favorite()
+        
