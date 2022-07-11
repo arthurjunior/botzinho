@@ -21,4 +21,7 @@ for tweet in tweepy.Cursor(api.serach, search).items(numberTweets):
         print('tweet retuitado e favoritado')
         tweet.retweet()
         tweepy.favorite()
-        
+     except tweepy.TweetError as e:   
+        print(e.reason)
+     except StopIteration 
+        break  
