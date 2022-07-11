@@ -7,4 +7,13 @@ auth.set_acess_token("1546240167744360454-k6Y7sHy7b2qWvwfzZfbuV7h0Dkr2qd","eLfWH
 #limite de vezes que o bot retuita
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 user = api.me()
-print(user)
+
+#variavel de busca da api
+search = ""
+
+#numero de tweet maximo
+numberTweets = 100
+
+#loping para ficar pesquisando os twit e cursor ( que recebe um metodo e um parametro da propia API)
+for tweet in tweepy.Cursor(api.serach, search).items(numberTweets):
+    try:
