@@ -9,7 +9,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 user = api.me()
 
 #variavel de busca da api
-search = "maconheiro"
+search = "2022"
 
 #numero de tweet maximo
 numberTweets = 100
